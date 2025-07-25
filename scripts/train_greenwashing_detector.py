@@ -4,8 +4,9 @@ from datasets import Dataset
 from transformers import BertTokenizerFast, BertForSequenceClassification, Trainer, TrainingArguments
 import os
 
-DATA_PATH = '../data/greenwashing_dataset.csv'
-MODEL_DIR = '../models/greenwashing_detector'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, '..', 'data', 'greenwashing_dataset.csv')
+MODEL_DIR = os.path.join(BASE_DIR, '..', 'models', 'greenwashing_detector')
 
 
 def main():

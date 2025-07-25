@@ -16,8 +16,33 @@ This repository contains planning documentation for **GreenChain**, a simulated 
 ## 🧪 Status
 
 ✅ Repository initialized  
-�� Project plan uploaded  
+�� Project plan uploaded
 🔧 Development phases starting soon
+
+## 🚀 Quickstart
+
+1. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Train the ESG and greenwashing models (optional – pre-trained models are
+   provided in `models/`):
+
+   ```bash
+   python scripts/train_esg_model.py
+   python scripts/train_greenwashing_detector.py
+   ```
+
+3. Launch the API:
+
+   ```bash
+   python api/app.py
+   ```
+
+   The `/predict` endpoint accepts JSON data with ESG metrics and free text and
+   returns the predicted ESG category and a greenwashing label.
 
 ## 📜 License
 
