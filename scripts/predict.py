@@ -3,8 +3,11 @@ import pandas as pd
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 import os
 
-ESG_MODEL_PATH = '../models/esg_model.pkl'
-GREEN_MODEL_DIR = '../models/greenwashing_detector'
+# Resolve paths relative to this file so the module works regardless of the
+# current working directory.
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ESG_MODEL_PATH = os.path.join(BASE_DIR, '..', 'models', 'esg_model.pkl')
+GREEN_MODEL_DIR = os.path.join(BASE_DIR, '..', 'models', 'greenwashing_detector')
 
 
 def load_models():

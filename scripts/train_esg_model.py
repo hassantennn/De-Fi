@@ -6,11 +6,13 @@ from sklearn.metrics import classification_report, confusion_matrix
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
-DATA_PATH = '../data/esg_dataset.csv'
-MODEL_PATH = '../models/esg_model.pkl'
-PRED_PATH = '../reports/esg_predictions.csv'
-IMPLOT_PATH = '../reports/esg_feature_importance.png'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, '..', 'data', 'esg_dataset.csv')
+MODEL_PATH = os.path.join(BASE_DIR, '..', 'models', 'esg_model.pkl')
+PRED_PATH = os.path.join(BASE_DIR, '..', 'reports', 'esg_predictions.csv')
+IMPLOT_PATH = os.path.join(BASE_DIR, '..', 'reports', 'esg_feature_importance.png')
 
 
 def main():
